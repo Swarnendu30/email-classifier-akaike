@@ -31,8 +31,21 @@ Output:
 ```json
 {
   "input_email_body": "...",
-  "list_of_masked_entities": [...],
+  "list_of_masked_entities": [ ],
   "masked_email": "...",
   "category_of_the_email": "..."
 }
+```
+
+Sample Python script:
+```python
+import requests
+
+url = "https://swarnendub30-akaike-proj.hf.space/process-email"
+payload = {
+    "email": "Hi Savita,\nPlease contact me at savita96@example.com.\nThanks!"
+}
+
+response = requests.post(url, json=payload)
+print(response.json())
 ```
