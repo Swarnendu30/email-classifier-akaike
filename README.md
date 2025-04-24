@@ -13,3 +13,26 @@ This project is a FastAPI-based microservice that processes raw email text. It d
 You can test the API online: 
 - FastAPI GUI: https://swarnendub30-akaike-proj.hf.space/docs
 - API Deployment link: https://swarnendub30-akaike-proj.hf.space/process-email
+
+---
+
+## Usage Instructions
+
+API call example:
+
+Request body:
+'''json
+{
+  "email": "Hi Savita,\nPlease contact me at savita96@example.com.\nThanks!"
+}
+'''
+
+Output:
+'''json
+{
+  "input_email_body": "...",
+  "list_of_masked_entities": [...],
+  "masked_email": "...",
+  "category_of_the_email": "..."
+}
+'''
