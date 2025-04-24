@@ -11,5 +11,5 @@ This project is a FastAPI-based microservice that processes raw email text. It d
 ## 🌍 Live Demo (Hugging Face Space)
 
 You can test the API online: 
-FastAPI GUI: https://swarnendub30-akaike-proj.hf.space/docs
-API Deployment link: https://swarnendub30-akaike-proj.hf.space/process-email
+- FastAPI GUI: https://swarnendub30-akaike-proj.hf.space/docs
+- API Deployment link: https://swarnendub30-akaike-proj.hf.space/process-email
