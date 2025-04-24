@@ -3,7 +3,6 @@ from groq import Groq
 GROQ_API_KEY = "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"
 client = Groq(api_key=GROQ_API_KEY)
 
-# Your categories
 categories = [
     "Billing Issues",
     "Technical Support",
