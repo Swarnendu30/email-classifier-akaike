@@ -21,18 +21,18 @@ You can test the API online:
 API call example:
 
 Request body:
-'''json
+```json
 {
   "email": "Hi Savita,\nPlease contact me at savita96@example.com.\nThanks!"
 }
-'''
+```
 
 Output:
-'''json
+```json
 {
   "input_email_body": "...",
   "list_of_masked_entities": [...],
   "masked_email": "...",
   "category_of_the_email": "..."
 }
-'''
+```
