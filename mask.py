@@ -13,7 +13,7 @@ def process_text(text):
     if re.search(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', text):
         masked_text, masking_log = mask_email(masked_text, masking_log)
 
-    # Phone number detection using your format
+    # Phone number detection format
     if (re.search(rf"\+{SEPARATOR}(?:\d{SEPARATOR}){{9,}}", text) or
         re.search(rf"\b(?:\d{SEPARATOR}){{9,11}}\b", text)):
         masked_text, masking_log = mask_phone(masked_text, masking_log)
@@ -84,7 +84,7 @@ def mask_phone(masked_text, masking_log):
     # Find all matches
     matches = list(pattern.finditer(masked_text))
     
-    # Reverse matches to avoid offset issues when replacing
+    # Reverse matches to avoid issues when replacing
     for match in reversed(matches):
         start, end = match.span()
         phone = match.group(0)
@@ -228,7 +228,7 @@ def mask_cvv(masked_text, masking_log):
         start, end = match.span()
         cvv = match.group()
 
-        # Optional sanity check: skip if next to obvious large numbers like card numbers
+        # Skip if next to obvious large numbers like card numbers
         if len(cvv) == 3 or len(cvv) == 4:
             masking_log = pd.concat([masking_log, pd.DataFrame([{
                 "type": "cvv",
